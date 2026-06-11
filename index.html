@@ -1259,12 +1259,20 @@
         <a class="hdr-link"
            href="https://aistudio.google.com/apikey"
            target="_blank">🔑 Free API Key</a>
+        <!-- <div class="api-pill">
+          <div class="api-dot" id="apiDot"></div>
+          <input type="password" id="apiKey" placeholder="Paste Gemini API key..." oninput="updateDot()" />
+</div> -->
         <div class="api-pill">
           <div class="api-dot" id="apiDot"></div>
-          <input type="password"
-                 id="apiKey"
-                 placeholder="Paste Gemini API key..."
-                 oninput="updateDot()" />
+          <form autocomplete="on" style="margin:0;padding:0">
+            <input type="text"
+                   id="apiKey"
+                   name="gemini-api-key"
+                   autocomplete="on"
+                   placeholder="Paste Gemini API key..."
+                   oninput="updateDot(); localStorage.setItem('pc_apikey', this.value.trim())" />
+          </form>
         </div>
       </div>
     </header>
@@ -1950,6 +1958,13 @@ function delSaved(e,id){e.stopPropagation();putSaved(getSaved().filter(x=>x.id!=
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 renderSaved();
+
+// Load saved API key
+const savedKey = localStorage.getItem('pc_apikey');
+if(savedKey) {
+  document.getElementById('apiKey').value = savedKey;
+  updateDot();
+}
     </script>
   </body>
 </html>
