@@ -27,8 +27,8 @@
             --s3: #1e1e1e;
             --bd: #242424;
             --bd2: #2e2e2e;
-            --acc: #c8f135;
-            --adim: rgba(200, 241, 53, .1);
+            --acc: #00cec9;
+            --adim: rgba(10, 10, 10, 0.1);
             --aglow: rgba(200, 241, 53, .2);
             --txt: #f0f0f0;
             --txt2: #aaa;
@@ -36,7 +36,7 @@
             --danger: #ff4d4d;
             --warn: #f5a623;
             --good: #4cde80;
-            --blue: #4a9eff
+            --blue: #4a9eff;
         }
 
         body {
@@ -83,13 +83,14 @@
         }
 
         .logo {
-            font-family: 'Syne', sans-serif;
+
             font-size: 19px;
             font-weight: 900;
             letter-spacing: -.5px;
             display: flex;
             align-items: center;
-            gap: 8px
+            gap: 8px;
+            text-transform: uppercase;
         }
 
         .logo span {
@@ -315,9 +316,9 @@
             border: none;
             border-radius: 9px;
             font-size: 14px;
-            font-weight: 800;
+            font-weight: 700;
             cursor: pointer;
-            font-family: 'Syne', sans-serif;
+
             transition: opacity .2s, transform .1s;
             display: flex;
             align-items: center;
@@ -466,7 +467,7 @@
         }
 
         .empty h3 {
-            font-family: 'Syne', sans-serif;
+
             font-size: 15px;
             font-weight: 700;
             color: var(--txt2)
@@ -587,7 +588,7 @@
         }
 
         .si-val {
-            font-family: 'Syne', sans-serif;
+
             font-size: 20px;
             font-weight: 800
         }
@@ -631,7 +632,7 @@
         }
 
         .lh-score {
-            font-family: 'Syne', sans-serif;
+
             font-size: 48px;
             font-weight: 900;
             line-height: 1
@@ -907,7 +908,7 @@
             font-size: 12px;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Syne', sans-serif;
+
             transition: opacity .2s
         }
 
@@ -1111,7 +1112,7 @@
         }
 
         .sec-hd {
-            font-family: 'Syne', sans-serif;
+
             font-size: 13px;
             font-weight: 800;
             color: var(--txt);
@@ -1156,7 +1157,7 @@
         }
 
         .modal h3 {
-            font-family: 'Syne', sans-serif;
+
             font-size: 14px;
             font-weight: 800;
             margin-bottom: 14px
@@ -1225,7 +1226,7 @@
             font-size: 10px;
             padding: 2px 8px;
             border-radius: 12px;
-            font-family: 'Syne', sans-serif;
+
             display: inline-block;
             margin-right: 6px
         }
@@ -1274,13 +1275,19 @@
             <span class="lbl-dot"></span>Your Offer
           </div>
           <label>Skill / Service</label>
-          <input id="skill" placeholder="e.g. Python automation, Brand design" />
+          <input type="text"
+                 id="skill"
+                 placeholder="e.g. Python automation, Brand design" />
           <label>Who you help</label>
-          <input id="niche" placeholder="e.g. E-commerce brands, Law firms" />
+          <input type="text"
+                 id="niche"
+                 placeholder="e.g. E-commerce brands, Law firms" />
           <label>Outcome you create</label>
-          <input id="outcome" placeholder="e.g. Save 10hrs/week, Increase conversions" />
+          <input type="text"
+                 id="outcome"
+                 placeholder="e.g. Save 10hrs/week, Increase conversions" />
           <label>Portfolio / LinkedIn (optional)</label>
-          <input id="portfolio" placeholder="https://..." />
+          <input type="text" id="portfolio" placeholder="https://..." />
         </div>
         <div class="lsec">
           <div class="lbl">
