@@ -8,7 +8,7 @@
     <meta name="keywords"
           content="pitch generator, elevator pitch, business pitch, sales generator, startup tools">
     <title>PitchCraft AI</title>
-     <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap');
 
@@ -1241,6 +1241,13 @@
             }
         }
     </style>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('key') !== 'road-to-1000-rejections') {
+        document.documentElement.innerHTML = '<h1>404 Not Found</h1>'; 
+        window.stop(); 
+      }
+    </script>
   </head>
   <body>
     <header>
