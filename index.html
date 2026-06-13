@@ -1963,7 +1963,9 @@ function loadSaved(id){
   document.querySelectorAll('.rtab').forEach((t,i)=>t.classList.toggle('active',i===0));
   document.querySelectorAll('.tab-pane').forEach((p,i)=>p.classList.toggle('active',i===0));
 }
-function delSaved(e,id){e.stopPropagation();putSaved(getSaved().filter(x=>x.id!==id));renderSaved();}
+function delSaved(e,id){e.stopPropagation();
+    if(!confirm('Delete this saved prospect? This cannot be undone.'))return;
+    putSaved(getSaved().filter(x=>x.id!==id));renderSaved();}
 
 // ── DB EXPORT / IMPORT ─────────────────────────────────────────────────────
 async function exportDB(){
